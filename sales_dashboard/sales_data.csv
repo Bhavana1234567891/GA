@@ -1,0 +1,16 @@
+Date,Product,Category,Region,Units Sold,Revenue
+2025-01-01,Laptop,Electronics,North,10,8000
+2025-01-02,Mouse,Electronics,South,40,1000
+2025-01-03,Keyboard,Electronics,East,25,1250
+2025-01-04,Chair,Furniture,West,15,3000
+2025-01-05,Table,Furniture,North,8,2400
+2025-01-06,Laptop,Electronics,South,12,9600
+2025-01-07,Mouse,Electronics,West,35,875
+2025-01-08,Chair,Furniture,East,20,4000
+2025-01-09,Table,Furniture,South,10,3000
+2025-01-10,Laptop,Electronics,North,14,11200
+2025-01-11,Keyboard,Electronics,South,30,1500
+2025-01-12,Chair,Furniture,North,18,3600
+2025-01-13,Mouse,Electronics,East,28,700
+2025-01-14,Table,Furniture,West,9,2700
+2025-01-15,Laptop,Electronics,East,11,8800
