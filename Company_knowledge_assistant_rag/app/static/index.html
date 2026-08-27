@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Docket — company knowledge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail">
+      <p class="kicker">Unit Project 2A</p>
+      <h1>Docket</h1>
+      <p class="lede">
+        Upload a company PDF. Questions go through retrieve → rerank → cited context,
+        then an answer grounded in those chunks.
+      </p>
+
+      <form class="upload" id="upload-form">
+        <label class="file">
+          <input id="pdf" type="file" accept="application/pdf" />
+          <span id="file-label">Choose a PDF</span>
+        </label>
+        <button type="submit" id="ingest" disabled>Index PDF</button>
+        <p class="status" id="ingest-status"></p>
+      </form>
+
+      <section class="docs">
+        <h2>Indexed files</h2>
+        <ul id="doc-list"><li class="muted">None yet</li></ul>
+      </section>
+
+      <section class="meta" id="meta">
+        <p>Connecting…</p>
+      </section>
+    </aside>
+
+    <main class="desk">
+      <header class="desk-head">
+        <div>
+          <h2>Ask the docket</h2>
+          <p>Sources and rerank scores appear under each answer so you can see the RAG steps.</p>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="rerank" checked />
+          Rerank
+        </label>
+      </header>
+
+      <div class="thread" id="thread"></div>
+
+      <form class="composer" id="form">
+        <label class="sr-only" for="question">Question</label>
+        <input id="question" name="question" autocomplete="off" placeholder="How many casual leaves do I get?" />
+        <button type="submit" id="ask">Ask</button>
+      </form>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,17 +1,33 @@
-import os
-
 from dotenv import load_dotenv
 
-from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_openai import ChatOpenAI
 
+from langchain_core.embeddings import Embeddings
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
 from langchain_chroma import Chroma
 
-from config.settings import CHROMA_DB_DIR
+from chromadb.utils.embedding_functions.onnx_mini_lm_l6_v2 import ONNXMiniLM_L6_V2
+
+from config.settings import CHAT_MODEL, CHROMA_DB_DIR
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 load_dotenv()
+
+
+class LocalMiniLMEmbeddings(Embeddings):
+    """Local all-MiniLM-L6-v2 embeddings (no OpenAI embedding access required)."""
+
+    def __init__(self):
+        self._model = ONNXMiniLM_L6_V2()
+
+    def embed_documents(self, texts: list[str]) -> list[list[float]]:
+        return [list(map(float, vector)) for vector in self._model(texts)]
+
+    def embed_query(self, text: str) -> list[float]:
+        return self.embed_documents([text])[0]
+
+
 class RAGPipeline:
 
     def __init__(self):
@@ -32,9 +48,7 @@ class RAGPipeline:
                 ""
             ]
         )
-        self.embedding_model = OpenAIEmbeddings(
-            model="text-embedding-3-small"
-        )
+        self.embedding_model = LocalMiniLMEmbeddings()
 
     def split_text(self, text: str):
 
@@ -147,7 +161,7 @@ class RAGPipeline:
             k=k
         )
 
-        llm = ChatOpenAI(model="gpt-4.1-mini")
+        llm = ChatOpenAI(model=CHAT_MODEL)
 
         system_prompt = (
             "You are a leave policy assistant. Answer using ONLY the policy "
