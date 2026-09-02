@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Brief example — extract, then recall",
+    "user_id": "fresh",
+    "turns": [
+      {
+        "user": "I normally buy running shoes below ₹10,000.",
+        "expect": {
+          "category": "running shoes",
+          "budget_max": 10000,
+          "products_max_price": 10000
+        }
+      },
+      {
+        "user": "Show me some new options.",
+        "expect": {
+          "reuse_memory": true,
+          "exclude_previously_shown": true
+        }
+      }
+    ]
+  },
+  {
+    "title": "Invalidate stale budget",
+    "user_id": "fresh",
+    "turns": [
+      {
+        "user": "My budget is now ₹15,000.",
+        "expect": {
+          "budget_max": 15000,
+          "may_include_over_10000": true
+        }
+      }
+    ]
+  },
+  {
+    "title": "Dress hunt with range and audience",
+    "user_id": "fresh",
+    "turns": [
+      {
+        "user": "I want a dress in the price range 1k-2k for women",
+        "expect": {
+          "category": "dress",
+          "budget_min": 1000,
+          "budget_max": 2000,
+          "audience": "women"
+        }
+      }
+    ]
+  }
+]

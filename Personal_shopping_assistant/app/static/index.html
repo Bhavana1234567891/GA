@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atelier — personal shopping memory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail">
+      <p class="kicker">Unit Project 3A</p>
+      <h1>Atelier</h1>
+      <p class="lede">
+        A shopping agent that stores brands, categories, colours, budget, and sizes,
+        then uses them when you only say “show me some new options.”
+      </p>
+
+      <label class="picker">
+        <span>Shopper</span>
+        <select id="user-select"></select>
+      </label>
+
+      <section class="memory" id="memory-panel">
+        <h3>Long-term memory</h3>
+        <p class="muted">Load a shopper to see saved preferences.</p>
+      </section>
+
+      <section class="memory task" id="task-panel">
+        <h3>Task memory</h3>
+        <p class="muted">Products already shown this hunt will not repeat.</p>
+      </section>
+
+      <div class="actions">
+        <button type="button" id="reset-session">New session</button>
+        <button type="button" class="ghost" id="wipe-profile">Wipe profile</button>
+      </div>
+
+      <section class="meta" id="meta">
+        <p>Loading catalog…</p>
+      </section>
+    </aside>
+
+    <main class="desk">
+      <header class="desk-head">
+        <div>
+          <h2>Personal shopping assistant</h2>
+          <p>Conversation is stored per shopper. Tool calls show how memory was read or written.</p>
+        </div>
+        <span class="mode" id="mode-badge">…</span>
+      </header>
+
+      <div class="chips" id="chips"></div>
+      <div class="thread" id="thread"></div>
+
+      <form class="composer" id="form">
+        <label class="sr-only" for="question">Message</label>
+        <input id="question" name="question" autocomplete="off" placeholder="I normally buy running shoes below ₹10,000." />
+        <button type="submit" id="ask">Ask</button>
+      </form>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
