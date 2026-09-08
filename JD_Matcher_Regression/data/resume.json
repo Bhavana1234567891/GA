@@ -1,0 +1,16 @@
+{
+  "resume_id": "RES-001",
+  "name": "Asha Rao",
+  "years": 3,
+  "location": "Bengaluru",
+  "skills": [
+    "Python",
+    "FastAPI",
+    "PostgreSQL",
+    "Docker",
+    "REST",
+    "Git",
+    "pytest"
+  ],
+  "summary": "Backend engineer. Built REST APIs with FastAPI, PostgreSQL, Docker. No Spark, React, or Java in this frozen resume."
+}

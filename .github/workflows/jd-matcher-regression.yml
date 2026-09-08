@@ -1,0 +1,42 @@
+name: jd-matcher-regression
+
+# Unit 6C FitMatch lives in JD_Matcher_Regression/. GitHub only reads workflows at repo root.
+on:
+  pull_request:
+    paths:
+      - "JD_Matcher_Regression/**"
+      - ".github/workflows/jd-matcher-regression.yml"
+  push:
+    paths:
+      - "JD_Matcher_Regression/prompts/**"
+      - "JD_Matcher_Regression/model.json"
+      - "JD_Matcher_Regression/agent.py"
+      - "JD_Matcher_Regression/data/**"
+      - "JD_Matcher_Regression/eval/**"
+      - "JD_Matcher_Regression/eval_runner.py"
+      - ".github/workflows/jd-matcher-regression.yml"
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: JD_Matcher_Regression
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: pip install -r requirements.txt
+      - name: Run regression suite
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python eval_runner.py --out eval/reports/ci.json
+      - name: Upload eval report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-report
+          path: JD_Matcher_Regression/eval/reports/ci.json

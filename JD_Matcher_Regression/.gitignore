@@ -1,0 +1,11 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.streamlit/secrets.toml
+eval/reports/*.json
+!eval/reports/.gitkeep
+.idea/
+.vscode/

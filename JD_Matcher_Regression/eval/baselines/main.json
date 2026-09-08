@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-09-08T07:35:25.118915+00:00",
+  "n": 20,
+  "n_pass": 20,
+  "pass_rate": 1.0,
+  "by_category": {
+    "normal": {"n": 9, "pass": 9},
+    "edge": {"n": 6, "pass": 6},
+    "refusal": {"n": 5, "pass": 5}
+  },
+  "note": "Live LLM (gpt-4o-mini) baseline. Re-run eval_runner.py after prompt/tool/model/index changes."
+}

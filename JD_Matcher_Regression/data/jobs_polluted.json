@@ -1,0 +1,110 @@
+[
+  {
+    "job_id": "JOB-001",
+    "title": "Python FastAPI Engineer",
+    "location": "Bengaluru",
+    "min_years": 2,
+    "must_have": ["Python", "FastAPI", "PostgreSQL"],
+    "nice_to_have": ["Docker", "pytest"],
+    "blurb": "Own REST services in Python and FastAPI. Postgres is the system of record."
+  },
+  {
+    "job_id": "JOB-002",
+    "title": "Django Backend Engineer",
+    "location": "Hyderabad",
+    "min_years": 2,
+    "must_have": ["Python", "Django", "PostgreSQL"],
+    "nice_to_have": ["Redis", "Celery"],
+    "blurb": "Django monolith, ORM, and Postgres. Python required."
+  },
+  {
+    "job_id": "JOB-003",
+    "title": "React Frontend Engineer",
+    "location": "Bengaluru",
+    "min_years": 2,
+    "must_have": ["JavaScript", "React", "CSS"],
+    "nice_to_have": ["TypeScript", "REST"],
+    "blurb": "SPA work in React. Consume REST APIs; no backend ownership."
+  },
+  {
+    "job_id": "JOB-004",
+    "title": "Data Engineer",
+    "location": "Bengaluru",
+    "min_years": 3,
+    "must_have": ["Python", "Spark", "SQL"],
+    "nice_to_have": ["Kafka", "Airflow"],
+    "blurb": "Batch pipelines on Spark. SQL plus Python for transforms."
+  },
+  {
+    "job_id": "JOB-005",
+    "title": "DevOps Engineer",
+    "location": "Pune",
+    "min_years": 2,
+    "must_have": ["Kubernetes", "Terraform", "CI"],
+    "nice_to_have": ["Docker", "Python"],
+    "blurb": "Cluster and infra as code. Docker helps; Kubernetes is required."
+  },
+  {
+    "job_id": "JOB-006",
+    "title": "QA Automation Engineer",
+    "location": "Bengaluru",
+    "min_years": 1,
+    "must_have": ["Python", "pytest", "Git"],
+    "nice_to_have": ["Selenium", "REST"],
+    "blurb": "API tests in pytest. Python and Git required."
+  },
+  {
+    "job_id": "JOB-007",
+    "title": "Java Spring Engineer",
+    "location": "Chennai",
+    "min_years": 3,
+    "must_have": ["Java", "Spring", "Kafka"],
+    "nice_to_have": ["PostgreSQL", "Docker"],
+    "blurb": "Services in Java Spring. Kafka for events."
+  },
+  {
+    "job_id": "JOB-008",
+    "title": "Full Stack Engineer",
+    "location": "Bengaluru",
+    "min_years": 3,
+    "must_have": ["Python", "FastAPI", "React"],
+    "nice_to_have": ["TypeScript", "Docker"],
+    "blurb": "FastAPI backend plus a React UI."
+  },
+  {
+    "job_id": "JOB-009",
+    "title": "Flutter Mobile Engineer",
+    "location": "Remote",
+    "min_years": 2,
+    "must_have": ["Dart", "Flutter", "Firebase"],
+    "nice_to_have": ["REST", "Git"],
+    "blurb": "Mobile apps in Flutter and Dart."
+  },
+  {
+    "job_id": "JOB-010",
+    "title": "ML Engineer",
+    "location": "Bengaluru",
+    "min_years": 2,
+    "must_have": ["Java", "Spring", "Kafka"],
+    "nice_to_have": ["Docker", "FastAPI"],
+    "blurb": "POLLUTED INDEX: JOB-010 must_have was swapped from Python/PyTorch/SQL to Java/Spring/Kafka."
+  },
+  {
+    "job_id": "JOB-011",
+    "title": "IT Support Engineer",
+    "location": "Bengaluru",
+    "min_years": 1,
+    "must_have": ["Windows", "Networking", "Ticketing"],
+    "nice_to_have": ["Linux", "Git"],
+    "blurb": "L1 desktop and ticket work. Not a software role."
+  },
+  {
+    "job_id": "JOB-012",
+    "title": "Python Data Analyst",
+    "location": "Mumbai",
+    "min_years": 2,
+    "must_have": ["Python", "SQL", "pandas"],
+    "nice_to_have": ["Tableau", "Git"],
+    "blurb": "Analysis in pandas and SQL. Python required."
+  }
+]

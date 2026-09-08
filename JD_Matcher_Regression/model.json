@@ -1,0 +1,5 @@
+{
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "note": "Change provider or model to trigger the Unit 6C model CI path. The agent always calls this LLM; there is no stub memo."
+}
