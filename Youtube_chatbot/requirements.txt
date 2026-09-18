@@ -1,0 +1,14 @@
+langchain
+langchain-openai
+langchain-community
+langchain-core
+chromadb
+youtube-transcript-api
+tiktoken
+python-dotenv
+fastapi
+uvicorn[standard]
+rank-bm25
+sentence-transformers
+ragas
+datasets
